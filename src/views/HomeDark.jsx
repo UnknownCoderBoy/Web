@@ -1,7 +1,8 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Hero from "../components/hero/Hero";
-import Index from "../components/about/index";
+import About from "../components/about/About";
+import Experience from "../components/experience/Experience";
 import Address from "../components/Address";
 import Portfolio from "../components/portfolio/Portfolio";
 import Blog from "../components/blog/Blog";
@@ -12,7 +13,8 @@ import SwitchDark from "../components/switch/SwitchDark";
 const menuItem = [
   { icon: "fa-home", menuName: "Home" },
   { icon: "fa-user", menuName: "About" },
-  { icon: "fa-briefcase", menuName: "Portfolio" },
+  { icon: "fa-briefcase", menuName: "Experience" },
+  { icon: "fa-bars", menuName: "Portfolio" },
   { icon: "fa-envelope-open", menuName: "Contact" },
   { icon: "fa-comments", menuName: "Blog" },
 ];
@@ -61,10 +63,27 @@ const HomeDark = () => {
                 <span className="title-bg">Resume</span>
               </div>
               {/* End title */}
-              <Index />
+              <About />
             </div>
           </TabPanel>
           {/* About Content Ends */}
+
+          {/* Experience Content Starts */}
+          <TabPanel className="about">
+            <div
+              className="title-section text-left text-sm-center"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
+              <h1>
+                my <span>experience</span>
+              </h1>
+              <span className="title-bg">works</span>
+            </div>
+            {/* End title */}
+            <Experience />
+          </TabPanel>
+          {/* Experience Content Ends */}
 
           {/* Portfolio Content Starts */}
           <TabPanel className="portfolio professional">
