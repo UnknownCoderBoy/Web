@@ -1,13 +1,13 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import Hero from "../../components/hero/Hero";
-import Index from "../../components/about/index";
-import Address from "../../components/Address";
-import Portfolio from "../../components/portfolio/Portfolio";
-import Blog from "../../components/blog/Blog";
-import Contact from "../../components/Contact";
-import Social from "../../components/Social";
-import SwitchDark from "../../components/switch/SwitchDark";
+import Hero from "../components/hero/Hero";
+import Index from "../components/about/index";
+import Address from "../components/Address";
+import Portfolio from "../components/portfolio/Portfolio";
+import Blog from "../components/blog/Blog";
+import Contact from "../components/Contact";
+import Social from "../components/Social";
+import SwitchDark from "../components/switch/SwitchDark";
 
 const menuItem = [
   { icon: "fa-home", menuName: "Home" },
@@ -17,14 +17,13 @@ const menuItem = [
   { icon: "fa-comments", menuName: "Blog" },
 ];
 
-const HomeRtl = () => {
-  document.querySelector("body").classList.add("rtl");
+const HomeDark = () => {
+  document.querySelector("body").classList.remove("rtl");
 
   return (
     <div className="yellow">
       <SwitchDark />
       {/* End Switcher */}
-
       <Tabs>
         <div className="header">
           <TabList className=" icon-menu  revealator-slideup revealator-once revealator-delay1">
@@ -68,7 +67,7 @@ const HomeRtl = () => {
           {/* About Content Ends */}
 
           {/* Portfolio Content Starts */}
-          <TabPanel className="portfolio">
+          <TabPanel className="portfolio professional">
             <div
               className="title-section text-left text-sm-center"
               data-aos="fade-up"
@@ -162,4 +161,4 @@ const HomeRtl = () => {
   );
 };
 
-export default HomeRtl;
+export default HomeDark;

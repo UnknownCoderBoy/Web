@@ -12,6 +12,7 @@ const AllBlogData = () => {
       id: 1,
       img: img1,
       title: "How to Own Your Audience by Creating an Email List",
+      slug: "how-to-own-your-audience-by-creating-an-email-list",
       commentor: "Rio ",
       date: "21 April 2022",
       tag: `wordpress, business, economy, design`,
@@ -28,6 +29,7 @@ const AllBlogData = () => {
       id: 2,
       img: img2,
       title: "Top 10 Toolkits for Deep Learning in 2022",
+      slug: "top-10-toolkits-for-deep-learning-in-2022",
       commentor: "Santhan ",
       date: "14 January 2022",
       tag: `wordpress, business, economy, design`,
@@ -44,6 +46,7 @@ const AllBlogData = () => {
       id: 3,
       img: img3,
       title: "Everything You Need to Know About Web Accessibility",
+      slug: "everything-you-need-to-know-about-web-accessibility",
       commentor: "steve ",
       date: "9 January 2020",
       tag: `wordpress, business, economy, design`,
@@ -60,6 +63,7 @@ const AllBlogData = () => {
       id: 4,
       img: img4,
       title: "How to Inject Humor & Comedy Into Your Brand",
+      slug: "how-to-inject-humor-and-comedy-into-your-brand",
       commentor: "Beker ",
       date: "15 March 2022",
       tag: `wordpress, business, economy, design`,
@@ -76,6 +80,7 @@ const AllBlogData = () => {
       id: 5,
       img: img5,
       title: "Women in Web Design: How To Achieve Success",
+      slug: "women-in-web-design-how-to-achieve-success",
       commentor: "Janntul ",
       date: "9 January 2021",
       tag: `wordpress, business, economy, design`,
@@ -92,6 +97,7 @@ const AllBlogData = () => {
       id: 6,
       img: img6,
       title: "Evergreen versus topical content: An overview",
+      slug: "evergreen-versus-topical-content-an-overview",
       commentor: "Hasan ",
       date: "9 January 2022",
       tag: `wordpress, business, economy, design`,
@@ -104,6 +110,7 @@ const AllBlogData = () => {
       description4:
         "Still ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
+    // Add more objects here as needed
   ];
 
   const [singleData, setSingleData] = useState({});
@@ -115,12 +122,18 @@ const AllBlogData = () => {
     setIsOpen(true);
   };
 
+  const handleBlogsDatabySlug = (slug) => {
+    const find = blogsData.find((item) => item?.slug === slug);
+    setSingleData(find);
+  };
+
   return {
     singleData,
     isOpen,
     setIsOpen,
     blogsData,
     handleBlogsData,
+    handleBlogsDatabySlug,
   };
 };
 
