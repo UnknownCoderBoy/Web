@@ -1,12 +1,13 @@
-import Image1 from "../../assets/img/portfolio/project-1.jpg";
-import Image2 from "../../assets/img/portfolio/project-2.jpg";
-import Image3 from "../../assets/img/portfolio/project-3.jpg";
-import Image4 from "../../assets/img/portfolio/project-4.jpg";
-import Image5 from "../../assets/img/portfolio/project-5.jpg";
-import Image6 from "../../assets/img/portfolio/project-6.jpg";
-import Image7 from "../../assets/img/portfolio/project-7.jpg";
-import Image8 from "../../assets/img/portfolio/project-8.jpg";
-import Image9 from "../../assets/img/portfolio/project-9.jpg";
+import Image1 from "../assets/img/portfolio/project-1.jpg";
+import Image2 from "../assets/img/portfolio/project-2.jpg";
+import Image3 from "../assets/img/portfolio/project-3.jpg";
+import Image4 from "../assets/img/portfolio/project-4.jpg";
+import Image5 from "../assets/img/portfolio/project-5.jpg";
+import Image6 from "../assets/img/portfolio/project-6.jpg";
+import Image7 from "../assets/img/portfolio/project-7.jpg";
+import Image8 from "../assets/img/portfolio/project-8.jpg";
+import Image9 from "../assets/img/portfolio/project-9.jpg";
+import Video1 from "../assets/img/portfolio/video.mp4";
 
 const PortfolioData = [
   {
@@ -45,6 +46,8 @@ const PortfolioData = [
     id: 3,
     type: "slider project",
     image: Image3,
+    image2: Image4,
+    image3: Image5,
     tag: [],
     delayAnimation: "200",
     modalDetails: [
@@ -63,6 +66,7 @@ const PortfolioData = [
     image: Image4,
     tag: ["logo", "video"],
     delayAnimation: "0",
+    video: Video1,
     modalDetails: [
       {
         project: "video",

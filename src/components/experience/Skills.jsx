@@ -1,41 +1,8 @@
 import React from "react";
-
-const skillsContent = [
-  {
-    skillName: "HTML",
-    skillImg: "https://img.icons8.com/color/48/000000/html-5.png",
-  },
-  {
-    skillName: "JAVASCRIPT",
-    skillImg: "https://img.icons8.com/color/48/000000/javascript.png",
-  },
-  {
-    skillName: "CSS",
-    skillImg: "https://img.icons8.com/color/48/000000/css3.png",
-  },
-  {
-    skillName: "PHP",
-    skillImg: "https://img.icons8.com/officel/48/000000/php-logo.png",
-  },
-  {
-    skillName: "WORDPRESS",
-    skillImg: "https://img.icons8.com/color/48/000000/wordpress.png",
-  },
-  {
-    skillName: "JQUERY",
-    skillImg: "https://img.icons8.com/ios-filled/48/000000/jquery.png",
-  },
-  {
-    skillName: "ANGULAR",
-    skillImg: "https://img.icons8.com/color/48/000000/angularjs.png",
-  },
-  {
-    skillName: "REACT",
-    skillImg: "https://img.icons8.com/plasticine/48/000000/react.png",
-  },
-];
+import AllPersonalData from "../../data/AllPersonalData";
 
 const Skills = () => {
+  const { skillsContent } = AllPersonalData();
   return (
     <>
       {skillsContent.map((val, i) => (
