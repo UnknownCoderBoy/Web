@@ -20,8 +20,6 @@ const menuItem = [
 ];
 
 const HomeDark = () => {
-  document.querySelector("body").classList.remove("rtl");
-
   return (
     <div className="yellow">
       <SwitchDark />

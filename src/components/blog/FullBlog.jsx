@@ -19,7 +19,7 @@ const FullBlog = () => {
   }
   return (
     <>
-      <div className="yellow">
+      <div data-aos="fade-up" data-aos-duration="1200">
         <SwitchDark />
         <div className="container">
           <div className="row justify-content-center">
