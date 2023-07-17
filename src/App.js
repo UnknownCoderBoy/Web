@@ -7,11 +7,24 @@ import AnimatedCursor from "react-animated-cursor";
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
+  function switchInit() {
+    if (localStorage.getItem("theme-color") === "dark") {
+      document.querySelector("body").classList.add("dark");
+      document.querySelector("body").classList.remove("light");
+    } else {
+      document.querySelector("body").classList.add("light");
+      document.querySelector("body").classList.remove("dark");
+    }
+  }
+
   // this for animation
   useEffect(() => {
     AOS.init({
       duration: 1200,
     });
+    localStorage.getItem("theme-color") != null
+      ? switchInit()
+      : localStorage.setItem("theme-color", "dark");
   }, []);
 
   return (

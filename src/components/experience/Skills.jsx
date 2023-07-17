@@ -1,14 +1,38 @@
 import React from "react";
 
 const skillsContent = [
-  { skillClass: "p25", skillPercent: "25", skillName: "HTML" },
-  { skillClass: "p89", skillPercent: "89", skillName: "JAVASCRIPT" },
-  { skillClass: "p70", skillPercent: "70", skillName: "CSS" },
-  { skillClass: "p66", skillPercent: "66", skillName: "PHP" },
-  { skillClass: "p95", skillPercent: "95", skillName: "WORDPRESS" },
-  { skillClass: "p50", skillPercent: "50", skillName: "JQUERY" },
-  { skillClass: "p65", skillPercent: "65", skillName: "ANGULAR" },
-  { skillClass: "p45", skillPercent: "45", skillName: "REACT" },
+  {
+    skillName: "HTML",
+    skillImg: "https://img.icons8.com/color/48/000000/html-5.png",
+  },
+  {
+    skillName: "JAVASCRIPT",
+    skillImg: "https://img.icons8.com/color/48/000000/javascript.png",
+  },
+  {
+    skillName: "CSS",
+    skillImg: "https://img.icons8.com/color/48/000000/css3.png",
+  },
+  {
+    skillName: "PHP",
+    skillImg: "https://img.icons8.com/officel/48/000000/php-logo.png",
+  },
+  {
+    skillName: "WORDPRESS",
+    skillImg: "https://img.icons8.com/color/48/000000/wordpress.png",
+  },
+  {
+    skillName: "JQUERY",
+    skillImg: "https://img.icons8.com/ios-filled/48/000000/jquery.png",
+  },
+  {
+    skillName: "ANGULAR",
+    skillImg: "https://img.icons8.com/color/48/000000/angularjs.png",
+  },
+  {
+    skillName: "REACT",
+    skillImg: "https://img.icons8.com/plasticine/48/000000/react.png",
+  },
 ];
 
 const Skills = () => {
@@ -16,16 +40,16 @@ const Skills = () => {
     <>
       {skillsContent.map((val, i) => (
         <div className="col-6 col-md-3 mb-3 mb-sm-5" key={i}>
-          <div className={`c100 ${val.skillClass}`}>
-            <span>{val.skillPercent}%</span>
-            <div className="slice">
-              <div className="bar"></div>
-              <div className="fill"></div>
+          <div className=" skill justify-content-center mx-1">
+            <div className="text-center">
+              <div>
+                <img src={val.skillImg} alt={val.skillName} />
+              </div>
+              <h6>
+                <span className="text-uppercase title">{val.skillName}</span>
+              </h6>
             </div>
           </div>
-          <h6 className="text-uppercase open-sans-font text-center mt-2 mt-sm-4">
-            {val.skillName}
-          </h6>
         </div>
       ))}
     </>
