@@ -1,10 +1,10 @@
 import React from "react";
-import UseData from "../../Hooks/UseData";
+import AllBlogData from "../../data/AllBlogData";
 import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
   const navigate = useNavigate();
-  const { blogsData } = UseData();
+  const { blogsData } = AllBlogData();
 
   return (
     <>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import PortfolioData from "./portfolioData";
+import PortfolioData from "../../data/portfolioData";
 import Modal from "./modal/Modal";
 
 const Portfolio = () => {

@@ -1,9 +1,6 @@
 import React from "react";
-import img1 from "../../../assets/img/portfolio/project-1.jpg";
-import img2 from "../../../assets/img/portfolio/project-2.jpg";
-import portfolioVideo from "../../../assets/img/portfolio/video.mp4";
 import CloseImg from "../../../assets/img/cancel.svg";
-import PortfolioData from "../portfolioData";
+import PortfolioData from "../../../data/portfolioData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -221,10 +218,10 @@ const Modal = ({ modalId, setGetModal }) => {
                       <img src={item.image} alt="portfolio project demo" />
                     </div>
                     <div>
-                      <img src={img1} alt="portfolio project demo" />
+                      <img src={item.image2} alt="portfolio project demo" />
                     </div>
                     <div>
-                      <img src={img2} alt="portfolio project demo" />
+                      <img src={item.image3} alt="portfolio project demo" />
                     </div>
                   </Slider>
                 </figure>
@@ -303,7 +300,7 @@ const Modal = ({ modalId, setGetModal }) => {
                     controls
                     poster={item.image}
                   >
-                    <source src={portfolioVideo} type="video/mp4" />
+                    <source src={item.video} type="video/mp4" />
                     {/* <source src="img/" type="video/mp4" /> */}
                   </video>
                 </figure>

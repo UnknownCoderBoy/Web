@@ -1,20 +1,8 @@
 import React from "react";
-import heroImg from "../../assets/img/hero/dark.jpg";
-import heroImgMobile from "../../assets/img/hero/img-mobile.jpg";
-
-const heroContent = {
-  heroImage: heroImg,
-  heroMobileImage: heroImgMobile,
-  heroTitleName: "steve milner",
-  heroDesignation: "web designer",
-  heroDescriptions: `I'm a Tunisian based web designer & front‑end developer focused on
-  crafting clean & user‑friendly experiences, I am passionate about
-  building excellent software that improves the lives of those
-  around me.`,
-  heroBtn: "more about me",
-};
+import AllPersonalData from "../../data/AllPersonalData";
 
 const Hero = () => {
+  const { heroContent } = AllPersonalData();
   return (
     <>
       <div className="row home-details-container align-items-center">

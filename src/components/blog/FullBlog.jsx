@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import UseData from "../../Hooks/UseData";
+import AllBlogData from "../../data/AllBlogData";
 import blogQuote from "../../assets/img/blog/quote.svg";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import SwitchDark from "../../components/switch/SwitchDark";
 const FullBlog = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { singleData, handleBlogsDatabySlug } = UseData();
+  const { singleData, handleBlogsDatabySlug } = AllBlogData();
 
   useEffect(() => {
     handleBlogsDatabySlug(id);

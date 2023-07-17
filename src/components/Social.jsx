@@ -1,19 +1,8 @@
 import React from "react";
-
-const SocialShare = [
-  {
-    iconName: "fa fa-facebook",
-    link: "https://www.facebook.com/",
-  },
-  { iconName: "fa fa-twitter", link: "https://twitter.com/" },
-  {
-    iconName: "fa fa-youtube",
-    link: "https://www.youtube.com/",
-  },
-  { iconName: "fa fa-dribbble", link: "https://dribbble.com/" },
-];
+import AllPersonalData from "../data/AllPersonalData";
 
 const Social = () => {
+  const { SocialShare } = AllPersonalData();
   return (
     <ul className="social list-unstyled pt-1 mb-5">
       {SocialShare.map((val, i) => (
