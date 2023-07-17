@@ -1,37 +1,42 @@
 import React, { useState } from "react";
-import lightImage from "../../assets/img/sun.png";
+import { Moon, Sun } from "lucide-react";
 
 const SwitchDark = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setDark] = useState(
+    localStorage.getItem("theme-color") === "dark"
+  );
 
   const handleLabelClick = () => {
     if (isDark) {
-      localStorage.setItem("theme-color", "dark");
-      document.querySelector("body").classList.add("dark");
-      document.querySelector("body").classList.remove("light");
-      setIsDark(false);
-    } else {
+      setDark(false);
       localStorage.setItem("theme-color", "light");
       document.querySelector("body").classList.add("light");
       document.querySelector("body").classList.remove("dark");
-      setIsDark(true);
+    } else {
+      setDark(true);
+      localStorage.setItem("theme-color", "dark");
+      document.querySelector("body").classList.add("dark");
+      document.querySelector("body").classList.remove("light");
     }
   };
 
   return (
-    <label className={`theme-switcher-label d-flex  ${isDark ? "active" : ""}`}>
+    <label className={`theme-switcher-label d-flex  ${isDark ? "" : "active"}`}>
       <input
         type="checkbox"
         onClick={handleLabelClick}
         className="theme-switcher"
       />
       <div className="switch-handle">
-        <span className="light-text">
-          <img src={lightImage} alt="swicher" className="filter_1" />
-        </span>
-        <span className="dark-text">
-          <i className="fa fa-moon-o" aria-hidden="true"></i>
-        </span>
+        {isDark ? (
+          <span className="light-text">
+            <Sun className="filter_1" />
+          </span>
+        ) : (
+          <span className="dark-text">
+            <Moon />
+          </span>
+        )}
       </div>
     </label>
   );
